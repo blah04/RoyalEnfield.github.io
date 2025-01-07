@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Enfield Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            background-image: url('https://www.royalenfield.com/content/dam/royal-enfield/united-kingdom/our-world/wallpaper/2022/june/thumb/452X264.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(240, 240, 240, 0.6); /* Adjust the last value (0.8) for opacity */
+            z-index: -1;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+        }
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1rem;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .reviews {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+        .review {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="#" class="logo"><img src="https://listcarbrands.com/wp-content/uploads/2023/01/Royal-Enfield-Logo-scaled.jpg" alt="RE Logo" width="30" height="30" style="vertical-align: middle;">Royal Enfield</a>
+            <div>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="https://www.royalenfield.com/in/en/home/" target="_blank"></a>
+                <a href="#video">Advertisement</a>
+                <a href="#reviews">Reviews</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section id="home">
+            <h1>Welcome to Royal Enfield</h1>
+            <p>Discover the legacy of the oldest motorcycle brand in continuous production.</p>
+        </section>
+
+        <section id="about">
+            <h2>About Royal Enfield</h2>
+            <p>Royal Enfield is an Indian multinational motorcycle manufacturing company headquartered in Chennai, Tamil Nadu, India. The company is the oldest global motorcycle brand in continuous production, and operates manufacturing plants in Chennai in India.</p>
+            <p>The company's origins can be traced back to 1901 when Enfield Cycle Company, of Redditch, Worcestershire, England, launched its first motorcycle. Royal Enfield has been a symbol of resilience, craftsmanship, and timeless appeal for over a century.</p>
+        </section>
+
+        <section id="models">
+            <h2>Royal Enfield Models</h2>
+            <div class="image-gallery">
+                <img src="https://www.royalenfield.com/content/dam/royal-enfield/india/motorcycles/classic-350/landing/classic-350-motorcycle.jpg" alt="Classic 350">
+                <img src="https://www.webbikeworld.com/wp-content/uploads/2023/08/2022-Royal-Enfield-Interceptor-650-Review-2.jpg" alt="Interceptor 650">
+                <img src="https://gaadiwaadi.com/wp-content/uploads/2021/02/Smoked-Garage-Royal-Enfield-Himalayan-3-1068x712.jpg" alt="Himalayan">
+            </div>
+        </section>
+
+        <section id="video">
+            <h2>Royal Enfield Advertisement</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/Y7i-o4yxjnI" title="Royal Enfield Advertisement" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section id="reviews">
+            <h2>Celebrity Reviews</h2>
+            <div class="reviews">
+                <div class="review">
+                    <h3>Ewan McGregor</h3>
+                    <p>Royal Enfield bikes are a perfect blend of classic style and modern performance. The ride quality is exceptional!</p>
+                </div>
+                <div class="review">
+                    <h3>Gul Panag</h3>
+                    <p>I've been riding Royal Enfield for years. Their bikes are not just machines; they're a way of life. The Himalayan is my absolute favorite for long rides.</p>
+                </div>
+                <div class="review">
+                    <h3>Sidharth Malhotra</h3>
+                    <p>Royal Enfield represents the spirit of exploration. The Classic 350 is my go-to bike for both city rides and weekend getaways.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
